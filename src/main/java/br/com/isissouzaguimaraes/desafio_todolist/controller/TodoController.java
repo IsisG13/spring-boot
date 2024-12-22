@@ -25,7 +25,7 @@ public class TodoController {
     }
 
     @PostMapping
-    List<Todo> create(@RequestBody Todo todo) {
+    List<Todo> create(@RequestBody @Valid Todo todo) {
         return todoService.create(todo);
     }
 
@@ -35,7 +35,7 @@ public class TodoController {
     }
 
     @PutMapping
-    List<Todo> update(@RequestBody @Valid Todo todo) {
+    List<Todo> update(@RequestBody Todo todo) {
         return todoService.update(todo);
     }
 
