@@ -21,6 +21,10 @@ public class Todo {
     private boolean realizado;
     private int prioridade;
 
+    // Construtor padrão (obrigatório para JPA)
+    public Todo() {
+    }
+
     public Todo(String nome, String descricao, boolean realizado, int prioridade) {
         this.nome = nome;
         this.descricao = descricao;
